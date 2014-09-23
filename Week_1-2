@@ -27,7 +27,7 @@ tesla=Car.new('Tesla','Model S','2013')
 nissan=Car.new('Nissan','Leaf','2012')
 toyota=Car.new('Toyota', 'Prius', 2012)
 
-
+toyota.currentOwner=me_two
 tesla.currentOwner = me_one
 nissan.currentOwner = me_two
 
