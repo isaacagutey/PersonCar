@@ -1,0 +1,59 @@
+class Person
+  attr_accessor :first_name, :last_name, :city
+  def initialize(first_name,last_name,city)
+    @first_name=first_name
+    @last_name=last_name
+    @city=city
+  end
+end
+
+class Car
+  attr_accessor :company, :model, :year, :currentOwner
+
+  def initialize(company,model,year)
+    @company=company
+    @model=model
+    @year=year
+  end
+end
+
+me_one=Person.new('Jim','Smith','New York')
+me_two=Person.new('Mason','King','LA')
+
+puts me_one.city
+puts me_two.city
+
+tesla=Car.new('Tesla','Model S','2013')
+nissan=Car.new('Nissan','Leaf','2012')
+
+
+tesla.currentOwner = me_one
+nissan.currentOwner = me_two
+
+puts "company = #{tesla.company}"
+puts "model =  #{tesla.model}"
+puts "year = #{tesla.year}"
+puts "Current Owner = #{tesla.currentOwner.first_name}  #{tesla.currentOwner.last_name}"
+puts ' '
+puts "company = #{nissan.company}"
+puts "model = #{nissan.model}"
+puts "year = #{nissan.year}"
+puts "Current Owenr = #{nissan.currentOwner.first_name} #{nissan.currentOwner.last_name}"
+
+nissan_new_owner=Person.new('John','H','Jamaica')
+
+nissan.currentOwner=nissan_new_owner
+
+tesla_new_owner=Person.new('James','M','Bronx')
+
+tesla.currentOwner=tesla_new_owner
+
+puts "New Owner of Nissan"
+puts "First Name = #{nissan_new_owner.first_name}"
+puts "Last Name = #{nissan_new_owner.last_name}"
+puts "City = #{nissan_new_owner.city}"
+
+puts "New Owner of Tesla"
+puts "First Name = #{tesla_new_owner.first_name}"
+puts "Last Name = #{tesla_new_owner.last_name}"
+puts "City = #{tesla_new_owner.city}"
