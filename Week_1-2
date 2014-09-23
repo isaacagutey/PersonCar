@@ -49,6 +49,10 @@ tesla_new_owner=Person.new('James','M','Bronx')
 
 tesla.currentOwner=tesla_new_owner
 
+bmw_owner = Person.new("Larry", "Q", "Middle Village")
+bmw = Car.new('BMW', 'M3', '2015')
+bmw.currentOwner = bmw_owner
+
 puts "New Owner of Nissan"
 puts "First Name = #{nissan_new_owner.first_name}"
 puts "Last Name = #{nissan_new_owner.last_name}"
